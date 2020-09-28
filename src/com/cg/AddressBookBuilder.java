@@ -19,4 +19,21 @@ public class AddressBookBuilder {
 	public List<ContactDetailsBuilder> showContact() {
 		return addBook;
 	}
+	
+	public String updateContact(ContactDetailsBuilder contact) {
+		int count = 0;
+		for(ContactDetailsBuilder i : addBook) {
+			if(i.firstName.equalsIgnoreCase(contact.firstName)) {
+				addBook.remove(i);
+				addBook.add(contact);
+				count++;
+			}
+		}
+		if(count == 0) {
+			return "No contact to update";
+		}
+		else {
+			return "Contact updated successfully";
+		}
+	}
 }
