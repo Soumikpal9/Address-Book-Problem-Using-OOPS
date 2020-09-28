@@ -36,4 +36,14 @@ public class AddressBookBuilder {
 			return "Contact updated successfully";
 		}
 	}
+	
+	public boolean removeContact(String firstName) {
+		ContactDetailsBuilder contact = new ContactDetailsBuilder("","","","","","","","");
+		for(ContactDetailsBuilder i : addBook) {
+			if(i.firstName.equalsIgnoreCase(firstName)) {
+				contact = i;
+			}
+		}
+		return addBook.remove(contact);
+	}
 }
