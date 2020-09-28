@@ -1,7 +1,7 @@
 package com.cg;
 import java.util.*;
 
-//UC2
+//UC3
 public class Builder {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
